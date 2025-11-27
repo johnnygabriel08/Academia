@@ -1,0 +1,538 @@
+/* ---------------------------------------- */
+/* PALETA DE CORES: Fundo Escuro, Texto Claro, Destaque Azul Elétrico */
+/* ---------------------------------------- */
+/* RESET */
+/* ---------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #1a1a1a; /* Fundo Principal: Cinza Escuro Quase Preto (para o index e outras páginas) */
+    color: #ffffff; /* Texto Principal: Branco */
+}
+
+/* ---------------------------------------- */
+/* HEADER (Mantido Escuro para Destaque) */
+/* ---------------------------------------- */
+header {
+    background: #000000;
+    padding: 18px 0;
+    border-bottom: 3px solid #00b8ff; /* Destaque Azul */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header .container {
+    width: 92%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+.logo {
+    height: 60px; /* TAMANHO DA LOGO AJUSTADO */
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    color: #fff;
+    font-size: 22px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+/* MENU NORMAL */
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav a {
+    color: #fff;
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.nav a:hover,
+.nav .active {
+    color: #00b8ff; /* Destaque Azul Elétrico */
+}
+
+/* MENU MOBILE (MANTIDO ESCURO) */
+.menu-toggle {
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: #fff;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    z-index: 20;
+}
+
+.side-menu {
+    width: 260px;
+    background: #000000;
+    height: 100vh;
+    position: fixed;
+    left: -260px;
+    top: 0;
+    transition: .3s;
+    padding-top: 80px;
+    z-index: 15;
+}
+
+.side-menu ul {
+    list-style: none;
+}
+
+.side-menu li {
+    margin-bottom: 20px;
+}
+
+.side-menu a {
+    color: #fff;
+    padding: 15px 25px;
+    display: block;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.side-menu a:hover {
+    background: #333333;
+}
+/* JS - Ativação do Menu */
+.side-menu.active {
+    left: 0;
+}
+
+/* ---------------------------------------- */
+/* HERO (BANNER DE PROMOÇÃO EM TELA CHEIA - CORTADO) */
+/* ---------------------------------------- */
+.hero {
+    /* MANTIDO: 'cover' para preencher e cortar */
+    min-height: 85vh; 
+    background: url("../img/promo.png") center/cover no-repeat;
+    
+    display: block;
+    width: 100%;
+    padding: 0; 
+    margin: 0;
+    text-align: center; 
+}
+
+/* ---------------------------------------- */
+/* OFERTA DE VENDAS (AGORA CINZA ESCURO) */
+/* ---------------------------------------- */
+.oferta-vendas {
+    padding: 60px 8%;
+    /* ALTERADO: Fundo agora é cinza escuro para combinar com o body */
+    background: #1a1a1a; 
+    color: #ffffff; /* Texto Branco */
+    text-align: center;
+}
+
+.oferta-vendas .container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.oferta-vendas .title {
+    font-size: 30px;
+    color: #00b8ff; /* Destaque Azul Elétrico */
+    margin-bottom: 15px;
+    font-weight: 900;
+}
+
+.oferta-vendas .subtitle {
+    font-size: 20px;
+    color: #cccccc; /* Cinza Claro para o subtítulo */
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+.beneficios-lista {
+    margin: 30px auto;
+    max-width: 400px;  
+}
+
+.beneficios-lista ul {
+    list-style: none;
+    padding: 0;
+}
+
+.beneficios-lista li {
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ffffff; /* Texto Branco */
+    border-bottom: 1px dashed #333333; /* Linha divisória suave */
+    padding-bottom: 5px;
+}
+
+.call-to-action {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff; /* Texto Branco */
+    margin-top: 40px;
+    line-height: 1.5;
+}
+
+.frase-final {
+    font-style: italic;
+    color: #00b8ff; /* Destaque Azul Elétrico */
+    margin-top: 15px;
+    font-size: 17px;
+}
+
+.btn-matricula {
+    margin-top: 30px;
+    background: #00b8ff; /* Botão Azul Elétrico */
+    color: #000000; /* Texto do botão Preto */
+    padding: 15px 30px;
+    font-size: 19px;
+    display: inline-block;
+    border-radius: 50px;
+    font-weight: 900;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn-matricula:hover {
+    background: #0099cc;
+}
+
+
+/* ---------------------------------------- */
+/* OUTRAS SEÇÕES (PLANOS, MATRÍCULA, SOBRE) */
+/* ---------------------------------------- */
+
+.planos-section {
+    padding: 60px 8%;
+    text-align: center;
+    background: #1a1a1a; /* Fundo Principal Escuro */
+}
+
+.title {
+    font-size: 38px;
+    font-weight: bold;
+    color: #ffffff; /* Texto Branco */
+}
+
+.subtitle {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #cccccc; /* Texto Secundário Cinza Claro */
+}
+
+.cards {
+    margin-top: 50px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Card: Configura o Flexbox para alinhar o conteúdo e o botão */
+.card {
+    background: #000000; /* Cards Pretos */
+    border-radius: 14px;
+    width: 330px;
+    padding: 28px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5); /* Sombra mais visível em fundo escuro */
+    border-top: 5px solid #00b8ff; /* Destaque Azul */
+    
+    /* ESTILOS PARA ALINHAMENTO DO BOTÃO */
+    display: flex;  
+    flex-direction: column; 
+    text-align: center; 
+}
+
+/* Card Body: Garante que esta área ocupe todo o espaço restante */
+.card-body {
+    flex-grow: 1; /* Faz o corpo do card crescer e empurrar o botão para o fundo */
+}
+
+
+.card h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: #00b8ff;
+}
+
+.card p {
+    margin-top: 10px;
+    font-size: 17px;
+    color: #ffffff;
+}
+
+/* Garante que os itens da lista fiquem à esquerda */
+.card ul {
+    margin: 20px 0;
+    text-align: left; 
+}
+
+.card li {
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.preco {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+/* botões estilo smartfit */
+.btn {
+    margin-top: 15px;
+    display: inline-block;
+    padding: 14px 20px;
+    background: #00b8ff; /* Botão Azul Elétrico */
+    color: #000000;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #0099cc;
+}
+
+/* ---------------------------------------- */
+/* ESTILO DE RISCO PARA BENEFÍCIOS NÃO INCLUÍDOS */
+/* ---------------------------------------- */
+.riscado {
+    text-decoration: line-through; /* Adiciona a linha cortando o texto */
+    opacity: 0.6; /* Deixa o texto um pouco mais transparente para reforçar que não está incluso */
+}
+
+/* ---------------------------------------- */
+/* FORMULÁRIO PADRÃO (Antigo) */
+/* ---------------------------------------- */
+form {
+    background: #000000; /* Fundo do formulário Preto */
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+}
+
+form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #00b8ff;
+}
+
+form label {
+    font-weight: bold;
+    margin-top: 15px;
+    display: block;
+    color: #ffffff;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border-radius: 6px;
+    border: 1px solid #333333;
+    background: #222222; /* Input fundo cinza escuro */
+    color: #ffffff;
+}
+
+form button {
+    margin-top: 25px;
+    width: 100%;
+    padding: 14px;
+    background: #00b8ff; 
+    color: #000000;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #0099cc;
+}
+
+
+/* ---------------------------------------- */
+/* SOBRE (ESTILOS MELHORADOS PARA O NOVO CONTEÚDO) */
+/* ---------------------------------------- */
+.sobre-container {
+    background: #000000; 
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+}
+
+/* NOVO: Estilo para títulos dentro do container "Sobre" */
+.sobre-container h1 {
+    color: #00b8ff; /* Destaque azul para o título principal */
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.sobre-container h2 {
+    color: #ffffff;
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* NOVO: Estilo para a lista de objetivos com marcador customizado */
+.sobre-container ul {
+    list-style-type: none; /* Remove os marcadores padrão */
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+.sobre-container li {
+    padding-left: 28px; /* Espaço para o marcador customizado */
+    margin-bottom: 15px;
+    position: relative;
+    font-size: 17px;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+.sobre-container li::before {
+    content: "⚡"; /* Marcador customizado (Raio de Zeus) */
+    color: #00b8ff; /* Cor azul */
+    font-size: 16px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+/* ---------------------------------------- */
+/* RESPONSIVO */
+/* ---------------------------------------- */
+
+/* Desktop (acima de 900px): Retorna para o comportamento padrão (banner full-width) */
+@media (min-width: 900px) {
+    .hero {
+        flex-direction: column; 
+        justify-content: center; 
+        gap: 0;
+        padding: 0; 
+    }
+    
+    /* Corrige a posição da logo para não ser empurrada */
+    header .container {
+        justify-content: space-between;
+    }
+}
+
+/* Mobile (até 820px) */
+@media (max-width: 820px) {
+    .nav { display: none; }
+    .menu-toggle { display: block; }
+}
+
+/* ---------------------------------------- */
+/* ESTILOS ESPECÍFICOS DO FORMULÁRIO DE MATRÍCULA (matricula.html) - Estilo Limpo */
+/* ---------------------------------------- */
+
+/* Estilo do Conteúdo Principal do Formulário */
+#formulario-matricula {
+    background: #000000; /* Fundo do formulário Preto */
+    max-width: 500px; /* Largura reduzida para parecer mais contido */
+    margin: 40px auto;
+    padding: 35px 30px; /* Ajuste interno */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra mais destacada */
+    color: #ffffff;
+    text-align: left; /* Alinha o texto das labels à esquerda */
+    border: none; /* Remove a borda padrão */
+}
+
+#formulario-matricula h2 {
+    margin-bottom: 5px;
+    text-align: center;
+    color: #ffffff; /* Título Branco */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#formulario-matricula p {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #cccccc; /* Subtítulo Cinza Claro */
+}
+
+/* Estilo dos Campos de Input e Select */
+#formulario-matricula label {
+    font-weight: normal; /* Label menos pesada */
+    margin-top: 15px;
+    margin-bottom: 5px;
+    display: block;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+#formulario-matricula input,
+#formulario-matricula select {
+    width: 100%;
+    padding: 14px 12px; /* Aumenta o padding para inputs maiores */
+    border-radius: 8px; /* Borda mais arredondada */
+    border: 1px solid #333333;
+    background: #222222; /* Input fundo cinza escuro */
+    color: #ffffff;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#formulario-matricula input:focus,
+#formulario-matricula select:focus {
+    border-color: #00b8ff; /* Destaque azul ao focar */
+    outline: none;
+}
+
+/* Estilo do Botão Principal (CONTINUAR) */
+#formulario-matricula button[type="submit"] {
+    margin-top: 35px;
+    width: 100%;
+    padding: 18px; /* Botão bem alto */
+    background: #00b8ff; /* Botão Fundo AZUL Elétrico */
+    color: #000000; /* Texto PRETO */
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+#formulario-matricula button[type="submit"]:hover {
+    background: #0099cc; /* Fica um pouco mais escuro no hover */
+}
+```http://googleusercontent.com/image_generation_content/17

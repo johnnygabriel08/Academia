@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Planos - Academia</title>
-    <link rel="stylesheet" href="../src/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeus Iron Lab - Planos</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -14,33 +14,79 @@
         <ul>
             <li><a href="index.html">Início</a></li>
             <li><a href="planos.html" class="active">Planos</a></li>
-            <li><a href="matricular.html">Matrícula</a></li>
+            <li><a href="matricula.html">Matrícula</a></li>
             <li><a href="sobre.html">Sobre</a></li>
         </ul>
     </nav>
 
-    <header class="top">
-        <div class="brand">
-            <img src="/mnt/data/cc6b9d3e-dcd9-4e38-9dbe-526f3710cf21.png" alt="logo" class="logo" />
-            <h1>Academia</h1>
+    <header>
+        <div class="container">
+            <div class="logo-wrapper">
+                <img class="logo" src="img/logo.png" alt="Logo Zeus Iron Lab">
+                <span class="logo-text">Zeus Iron Lab</span>
+            </div>
+
+            <nav class="nav">
+                <a href="index.html">Início</a>
+                <a href="planos.html" class="active">Planos</a>
+                <a href="matricula.html">Matrícula</a>
+                <a href="sobre.html">Sobre</a>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="planos.html" class="active">Planos</a></li>
-                <li><a href="matricular.html">Matrícula</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main class="container">
-        <h2>Planos</h2>
-        <div id="planosLista" class="cards"></div>
-        <h3>Venha treinar na melhor academia da região!</h3>
-        <p>Os melhores equipamentos e infraestrutura com mensalidades acessíveis!</p>
-    </main>
+    <section class="planos-section">
+        <div class="container">
+            <h1 class="title">Escolha o seu Plano Zeus</h1>
+            <p class="subtitle">Encontre o plano ideal e inicie sua jornada na Zeus Iron Lab hoje mesmo.</p>
+            
+            <div class="cards">
+                
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Plano Fit</h2>
+                        <p class="preco">R$ 99,90 / mês</p>
+                        <ul>
+                            <li>Acesso livre em 1 unidade.</li>
+                            <li>Acompanhamento de profissional.</li>
+                            <li class="riscado">Acesso a todas as unidades da rede.</li>
+                            <li class="riscado">Treinos personalizados no App.</li>
+                        </ul>
+                    </div>
+                    <a href="matricula.html?plano=lite" class="btn">SELECIONAR</a>
+                </div>
 
-    <script src="../src/app.js"></script>
+                <div class="card" style="border-top: 5px solid #00b8ff;">
+                    <div class="card-body">
+                        <h2>Plano Plus</h2>
+                        <p class="preco">R$ 119,90 / mês</p>
+                        <ul>
+                            <li>Acesso a todas as unidades da rede.</li>
+                            <li>Acompanhamento de profissional.</li>
+                            <li>Treinos personalizados no App.</li>
+                            <li class="riscado">Acesso a cadeira massageadora.</li>
+                        </ul>
+                    </div>
+                    <a href="matricula.html?plano=full" class="btn">SELECIONAR</a>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Plano Titan</h2>
+                        <p class="preco">R$ 149,90 / mês</p>
+                        <ul>
+                            <li>Acesso a todas as unidades da rede.</li>
+                            <li>Acompanhamento de profissional.</li>
+                            <li>Acesso a cadeira massageadora.</li>
+                            <li>Treinos personalizados no App.</li>
+                        </ul>
+                    </div>
+                    <a href="matricula.html?plano=titan" class="btn">SELECIONAR</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/app.js"></script>
 </body>
 </html>

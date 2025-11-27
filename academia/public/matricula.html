@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Matrícula - Academia</title>
-    <link rel="stylesheet" href="../src/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeus Iron Lab - Matrícula</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -14,45 +14,56 @@
         <ul>
             <li><a href="index.html">Início</a></li>
             <li><a href="planos.html">Planos</a></li>
-            <li><a href="matricular.html" class="active">Matrícula</a></li>
+            <li><a href="matricula.html" class="active">Matrícula</a></li>
             <li><a href="sobre.html">Sobre</a></li>
         </ul>
     </nav>
 
-    <header class="top">
-        <div class="brand">
-            <img src="/mnt/data/cc6b9d3e-dcd9-4e38-9dbe-526f3710cf21.png" alt="logo" class="logo" />
-            <h1>Academia</h1>
+    <header>
+        <div class="container">
+            <div class="logo-wrapper">
+                <img class="logo" src="img/logo.png" alt="Logo Zeus Iron Lab">
+                <span class="logo-text">Zeus Iron Lab</span>
+            </div>
+
+            <nav class="nav">
+                <a href="index.html">Início</a>
+                <a href="planos.html">Planos</a>
+                <a href="matricula.html" class="active">Matrícula</a>
+                <a href="sobre.html">Sobre</a>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="planos.html">Planos</a></li>
-                <li><a href="matricular.html" class="active">Matrícula</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main class="container">
-        <h2>Faça sua Matrícula</h2>
+    <section class="planos-section">
+        <div class="container">
+            
+            <form id="formulario-matricula">
+                <h2>Crie sua Conta de Acesso!</h2>
+                <p>Preencha os dados abaixo para darmos continuidade na sua matrícula.</p>
 
-        <form id="formMatricula" class="card form-column">
-            <label for="nome">Nome</label>
-            <input type="text" id="nome" placeholder="Digite seu nome" required />
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
 
-            <label for="email">E-mail</label>
-            <input type="email" id="email" placeholder="Digite seu e-mail" required />
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
 
-            <label for="telefone">Telefone</label>
-            <input type="tel" id="telefone" placeholder="(00) 00000-0000" required />
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
 
-            <button id="btnEnviar">Enviar Matrícula</button>
+                <label for="plano-escolhido">Plano Selecionado:</label>
+                <select id="plano-escolhido" name="plano">
+                    <option value="lite">Plano Fit (R$ 99,90)</option>
+                    <option value="full" selected>Plano Plus (R$ 119,90)</option>
+                    <option value="titan">Plano Titan (R$ 149,90)</option>
+                </select>
 
-            <div id="erros" class="erros"></div>
-        </form>
-    </main>
+                <button type="submit">CONTINUAR PARA PAGAMENTO</button>
+            </form>
 
-    <script src="../src/app.js"></script>
+        </div>
+    </section>
+
+    <script src="js/app.js"></script>
 </body>
 </html>

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academia</title>
-    <link rel="stylesheet" href="../src/style.css">
+    <title>Zeus Iron Lab - Início</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -14,36 +14,58 @@
         <ul>
             <li><a href="index.html" class="active">Início</a></li>
             <li><a href="planos.html">Planos</a></li>
-            <li><a href="matricular.html">Matrícula</a></li>
+            <li><a href="matricula.html">Matrícula</a></li>
             <li><a href="sobre.html">Sobre</a></li>
         </ul>
     </nav>
 
-    <header class="top">
-        <div class="brand">
-            <img src="/mnt/data/cc6b9d3e-dcd9-4e38-9dbe-526f3710cf21.png" alt="logo" class="logo">
-            <h1>Academia</h1>
+    <header>
+        <div class="container">
+            <div class="logo-wrapper">
+                <img class="logo" src="img/logo.png" alt="Logo Zeus Iron Lab">
+                <span class="logo-text">Zeus Iron Lab</span>
+            </div>
+
+            <nav class="nav">
+                <a href="index.html" class="active">Início</a>
+                <a href="planos.html">Planos</a>
+                <a href="matricula.html">Matrícula</a>
+                <a href="sobre.html">Sobre</a>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Início</a></li>
-                <li><a href="planos.html">Planos</a></li>
-                <li><a href="matricular.html">Matrícula</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main class="container">
-        
-        <!--imagem de promoção de primeiro mês-->
-        <br>
-        <h2>Venha Treinar com a Gente!</h2>
-        <br>
-        <p></p>
-        <button onclick="window.location.href='matricular.html'">Inscreva-se!</button>
-    </main>
+    <section class="hero">
+        </section>
 
-    <script src="../src/app.js"></script>
+    <section class="oferta-vendas">
+        <div class="container">
+            <h2 class="title">Chegou a sua hora de transformar o corpo e a mente!</h2>
+            <p class="subtitle">Aproveite nossa oferta especial e treine o primeiro mês por um preço exclusivo.</p>
+            
+            <div class="beneficios-lista">
+                <ul>
+                    <li> Estrutura completa</li>
+                    <li> Treinos personalizados</li>
+                    <li> Acompanhamento profissional</li>
+                    <li> Ambiente motivador</li>
+                    <li> Aberto todos os dias</li>
+                </ul>
+            </div>
+
+            <p class="call-to-action">
+                    Garanta agora seu primeiro mês com desconto e comece hoje mesmo a sua evolução!
+                <br>Vagas limitadas — não perca esta chance.
+            </p>
+            
+            <p class="frase-final">
+                Transforme-se. Supere-se. **Torne-se a sua melhor versão.**
+            </p>
+            
+            <a href="matricula.html" class="btn btn-matricula">MATRICULE-SE</a>
+        </div>
+    </section>
+
+    <script src="js/app.js"></script>
 </body>
 </html>
